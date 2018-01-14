@@ -1,0 +1,132 @@
+body{
+    background: #191919;
+}
+.header{
+   text-align: center;
+}
+
+.container{
+    background: #262626;
+    width: 700px;
+    height: 500px;
+    margin: 20px auto;
+    box-shadow: 3px 4px 13px 4px rgba(0,0,0.75);
+    border: 1px solid #4D4D4D;
+}
+.menu_left{
+    width: 25%;
+    float:left;
+    margin-left: 10px;
+}
+
+.rec, .dist, .dist_pause{
+    font-family: Arial;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(top, rgba(50, 50, 50, 1)0%, rgba(20,20,20,1)100%);
+    border: 1px solid black;
+    box-shadow: 1px 4px 1px -3px rgba(0,0,0.75);
+    padding: 1px 15px 1px 15px;
+    color: lightgreen;
+    margin-left: 20px;
+    
+}
+
+.on{
+    color: #C80606;
+
+}
+
+.video{
+    float: left;
+    width: 320px;
+    height: 240px;
+    border: 3px dashed #191919;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.menu_right{
+    float: left;
+    width: 25%;
+    margin-left: 10px;
+}
+
+.speed{
+    color: firebrick;
+    margin-left: 30px;
+}
+
+.distance{
+    color: firebrick;
+    margin-left: 30px;
+}
+
+.cam_line{
+	position: relative;
+	width: 130px;
+	height: 2px;
+	border-radius: 2px;
+	background-color: black;
+}
+
+.cam_poz{
+	position: absolute;
+    width: 8px;
+    height: 20px;
+    background-color: firebrick;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 60px;
+    margin-top: -10px; 
+}
+
+.direction{
+    margin: 30px auto;
+    width: 130px;
+
+}
+
+.run {
+	
+    text-decoration: none;
+    font-family: Arial;
+    color: #191919;
+    padding: 10px 50px;
+    border: 1px solid black;
+    background: -webkit-linear-gradient(top, rgba(76, 168, 255, 1)0%, rgba(11,61,112,1)100%);
+    border-radius: 5px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .3);
+    box-shadow: 1px 4px 1px -3px rgba(0,0,0.75);
+}
+
+.stop {
+    text-decoration: none;
+    font-family: Arial;
+    color: #191919;
+    padding: 10px 50px;
+    border: 1px solid black;
+    background: -webkit-linear-gradient(top, rgba(255, 0, 0, 1)0%, rgba(255,66,66,1)100%);
+    border-radius: 5px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .3);
+    box-shadow: 1px 4px 1px -3px rgba(0,0,0.75);
+}
+
+.run_btn{
+    clear: left;
+    display: table;
+    margin: 300px auto;
+    
+}
+
+.login{
+margin-left: 10px;
+	margin-top: -180px;
+	color: skyblue;
+}
+.login_btn, .logout_btn, .register_btn{
+	text-decoration: none;
+	color: skyblue;
+}
+

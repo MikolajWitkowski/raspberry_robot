@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% block control_panel  %}
+<div class="menu_left">
+	<p>Camera <p>
+   
+	<a class="rec" class="on" href="#">off</a>
+	   <!-- <li><a class="rec" id="on" href="#">on</a></li>-->
+  
+	<p>Distance Sensor</p>
+	<a class="dist" class="on" href="#">off</a><br><br>
+	<a class="dist_pause" class="on" href="#">pause</a>
+
+</div>
+
+<div class="video">           
+	<img class="video_img" src="" alt="no video" height="240" width="320">
+</div>
+<div class="menu_right">
+	<p>Engine use:</p>
+	<p class="speed">0 %</p>
+	<p>Distance:</p>
+	<p class= "distance">0 cm </p>
+	<p>Camera position</p>
+	<div class="cam_line"></div>
+	<div class="cam_poz"></div>
+</div>
+
+<div class="run_btn">
+<a class="run" href="#" >Run</a>
+</div>
+<div class="login">
+	<p>logged in as: {{ session.username }}
+	<a class="logout_btn" href="/logout/"> - logout</a>
+	</p>
+</div>
+
+{% endblock  %}
+
+

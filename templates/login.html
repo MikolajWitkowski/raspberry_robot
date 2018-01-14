@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% from "_formhelpers.html" import render_field %}
+{% block login %}
+	<div class="header">
+    <form method=post action="/login/">
+        <dl>
+            {{ render_field(form.username) }}
+            {{ render_field(form.password) }}
+        </dl>
+        <p><input class="run" type=submit value=Login></p>
+    </form>
+    <a class="register_btn" href="/register/">or register</a>
+    </div>
+{% endblock %}
