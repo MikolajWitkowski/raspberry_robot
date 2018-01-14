@@ -123,7 +123,8 @@ class DistanceSensor(threading.Thread):
 class Camera():
     
     def cam_play(self):
-        os.system('uv4l --driver raspicam --auto-video_nr --encoding h264 --width 320 --height 240 --quality 10 --framerate 10 --vflip')
+        os.system('uv4l --driver raspicam --auto-video_nr --encoding h264'
+                  '--width 320 --height 240 --quality 10 --framerate 10 --vflip')
 
     def cam_stop(self):
         os.system('sudo pkill uv4l')

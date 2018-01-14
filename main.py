@@ -18,7 +18,6 @@ camera_move = CameraMove()
    
 @app.route('/index/')
 def index():
-    username = session["username"]	
     return render_template('index.html')
 
 
@@ -58,7 +57,6 @@ def login():
 @app.route('/logout/')
 def logout():
     session.clear()
-    Close().gpio_cleanup()
     return redirect(url_for('login'))
 
 
@@ -188,19 +186,11 @@ def resume_distance():
     
 @app.route('/get_data', methods=['GET'])
 def get_data():
-   return jsonify(distance=str(th.dist), speed=str(robot.speed))
+    return jsonify(distance=str(th.dist), speed=str(robot.speed))
 
 
 if __name__ == '__main__':
-	app.run(debug=True, host='0.0.0.0', threaded=True)
-
-		
-		
-
-
-
-
-
+    app.run(debug=True, host='0.0.0.0', threaded=True)
 
 
 

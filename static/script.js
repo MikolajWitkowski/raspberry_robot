@@ -37,7 +37,7 @@ $(document).ready(function(){
     
     $('.rec').click(function(){
         $(this).html($(this).html() == 'off' ? 'on':'off')
-        $(this).toggleClass('on')
+        $(this).toggleClass('on');
         if (camera == false){
             $.get('/play_video');
         
@@ -49,14 +49,14 @@ $(document).ready(function(){
             
         }else{
             $.get('/stop_video');
-            $('.video_img').attr('src', '')
+            $('.video_img').attr('src', '');
             camera = false;
             }
-        })
+        });
     
     $('.dist').click(function(){
-		$(this).html('on')
-		$(this).addClass('on')
+		$(this).html('on');
+		$(this).addClass('on');
              
         if (distance == false){
 			 
@@ -84,7 +84,8 @@ $(document).ready(function(){
 		})
 
 
-	var down = {87: false, 83: false, 65: false, 68: false, 75: false, 76: false, 90:false, 88: false, 77:false, 188:false, 190:false}
+	var down = {87: false, 83: false, 65: false, 68: false, 75: false, 
+		76: false, 90:false, 88: false, 77:false, 188:false, 190:false};
 	$(document).keydown(function(e){
 		if (e.keyCode in down && run == true){
 			down[e.keyCode] = true;
@@ -123,17 +124,15 @@ $(document).ready(function(){
 				if (e.keyCode == 87 || e.keyCode == 83 || e.keyCode == 65 || e.keyCode == 68){	
 					$.get('/stop')
 				}
-                if(e.keyCode == 90){
-                    $.get('/move_camera_left');
-                    if($('.cam_poz').offset().left < 930){
-                        $('.cam_poz').animate({'marginLeft': "+=5px"}, 50);
-                        }
-                    }   
                 if(e.keyCode == 88){
+                    $.get('/move_camera_left');
+                    $('.cam_poz').animate({'marginLeft': "+=5px"}, 50);
+                    
+                    }   
+                if(e.keyCode == 90){
                     $.get('/move_camera_right');
-                    if($('.cam_poz').offset().left > 850){
-                     $('.cam_poz').animate({'marginLeft': "-=5px"}, 50);
-                        }
+                    $('.cam_poz').animate({'marginLeft': "-=5px"}, 50);
+                    
                     }
             }
         });
